@@ -14,12 +14,14 @@
 
   btn.on('click', function (e) {
     e.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0
-    }, '300');
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      '300'
+    );
   });
   //============================ Scroll To Top Js End ========================
-
 
   // ========================= Header Sticky Js Start ==============
   $(window).on('scroll', function () {
@@ -30,7 +32,6 @@
     }
   });
   // ========================= Header Sticky Js End===================
-
 
   //============================ Offcanvas Js Start ============================
   $(document).on('click', '.menu__open', function () {
@@ -43,7 +44,6 @@
 
   //============================ Offcanvas Js End ==============================
 
-
   // ========================== Add Attribute For Bg Image Js Start =====================
   $('.bg--img').css('background-image', function () {
     var bg = 'url(' + $(this).data('background-image') + ')';
@@ -51,6 +51,38 @@
   });
   // ========================== Add Attribute For Bg Image Js End =====================
 
+  // ========================= Brand Swiper Js Start =====================
+  if ($('.brand__slider').length) {
+    const brandSwiper = new Swiper('.brand__slider', {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      speed: 8000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        576: {
+          spaceBetween: 40,
+          slidesPerView: 4,
+        },
+        768: {
+          spaceBetween: 50,
+          slidesPerView: 5,
+        },
+        1024: {
+          spaceBetween: 60,
+          slidesPerView: 6,
+        },
+        1499: {
+          spaceBetween: 60,
+          slidesPerView: 8,
+        },
+      },
+    });
+  }
+  // ========================= Brand Swiper Js End =====================
 
   // ========================= Odometer Js Start ===================
   if ($('.odometer').length > 0) {
@@ -75,13 +107,11 @@
   };
   // ========================= Odometer Js End ===================
 
-
   // ========================= Magnific Popup Js Start ===================
   $('.promo__video__play').magnificPopup({
     type: 'iframe',
   });
   // ========================= Magnific Popup Js End ===================
-
 
   // ========================= Testimonial Swiper Js Start =====================
   const swiperTestimonials = new Swiper('.slider__class', {
@@ -111,13 +141,11 @@
   });
   // ========================= Testimonial Swiper Js End =====================
 
-
   // ========================= Select2 Js Start =====================
   if ($('.select2').length) {
     $('.select2').select2();
   }
   // ========================= Select2 Js End =====================
-
 
   // ========================= Show Hide Password Js Start ===================
   if ($('.password-show-hide').length) {
@@ -127,7 +155,7 @@
         let openEye = $(this).find('.open-eye-icon');
         let closeEye = $(this).find('.close-eye-icon');
 
-        if (inputField.attr('type') === "password") {
+        if (inputField.attr('type') === 'password') {
           inputField.attr('type', 'text');
           openEye.show();
           closeEye.hide();
@@ -141,7 +169,6 @@
   }
   // ========================= Show Hide Password Js End ===================
 
-
   // ========================= Scroll Reveal Js Start ===================
   const sr = ScrollReveal({
     origin: 'top',
@@ -149,43 +176,43 @@
     duration: 1500,
     delay: 100,
     reset: true,
-  })
+  });
 
   sr.reveal('.class__name', {
     delay: 60,
     interval: 100,
     origin: 'bottom',
-  })
+  });
   // ========================= Scroll Reveal Js End ===================
 
-
   // ========================== Table Data Label Js Start =====================
-  Array.from(document.querySelectorAll('table')).forEach(table => {
+  Array.from(document.querySelectorAll('table')).forEach((table) => {
     let heading = table.querySelectorAll('thead tr th');
     Array.from(table.querySelectorAll('tbody tr')).forEach((row) => {
       let columArray = Array.from(row.querySelectorAll('td'));
       if (columArray.length <= 1) return;
       columArray.forEach((colum, i) => {
-        colum.setAttribute('data-label', heading[i].innerText)
+        colum.setAttribute('data-label', heading[i].innerText);
       });
     });
   });
   // ========================== Table Data Label Js End =====================
 
-
   // ========================== Label Required Js Start =====================
   $.each($('input, select, textarea'), function (i, element) {
     if (element.hasAttribute('required')) {
-      $(element).closest('.form-group').find('label').first().addClass('required');
+      $(element)
+        .closest('.form-group')
+        .find('label')
+        .first()
+        .addClass('required');
     }
   });
   // ========================== Label Required Js End =====================
 
-
   // ========================= Preloader Js Start =====================
-  $(window).on("load", function () {
-    $(".preloader").fadeOut();
-  })
+  $(window).on('load', function () {
+    $('.preloader').fadeOut();
+  });
   // ========================= Preloader Js End=====================
-
 })(jQuery);
