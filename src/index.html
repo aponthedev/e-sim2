@@ -1,47 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>esim</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <!-- line awesome -->
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title -->
-  <title>wStacks - Frontend Starter Pack</title>
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/images/logo/favicon.png">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- Font awesome -->
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <!-- line awesome -->
-  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <!-- Swiper -->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="assets/css/select2.min.css">
-  <!-- Main css -->
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
-
-<body>
-
-  <!--==================== Preloader Start ====================-->
+  <body>
+    <!--==================== Preloader Start ====================-->
 <div class="preloader">
-    <div class="loader__text" data-text="wStacks"></div>
+  <div class="loader__text" data-text="E-Sim"></div>
 </div>
 <!--==================== Preloader End ====================-->
 
 
-  <!-- ==================== Scroll to Top Start ==================== -->
-  <a class="scroll-top"><i class="fas fa-angle-double-up"></i></a>
-  <!-- ==================== Scroll to Top End ==================== -->
+    <!-- ==================== Scroll to Top Start ==================== -->
+    <a class="scroll-top"><i class="fas fa-angle-double-up"></i></a>
+    <!-- ==================== Scroll to Top End ==================== -->
 
+    <!--==========================  Overlay Start  ==========================-->
+    <div class="overlay"></div>
+    <!--==========================  Overlay End  ==========================-->
 
-  <!--==========================  Overlay Start  ==========================-->
-  <div class="overlay"></div>
-  <!--==========================  Overlay End  ==========================-->
 <!--==========================  Offcanvas Section Start  ==========================-->
 <div class="offcanvas__area">
     <div class="offcanvas__topbar">
@@ -82,20 +80,11 @@
             </div>
             <div class="offcanvas__login">
                 <a href="#" class="btn btn--base">Sign in</a>
-                <!-- <div class="dropdown">
-                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Account
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
-                    </ul>
-                </div> -->
             </div>
         </div>
         <div class="offcanvas__menu">
             <ul>
-                <li><a href="#" class="active">About Us</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Blog</a></li>
@@ -111,75 +100,137 @@
 <!-- ==================== Header Start Here ==================== -->
 <header class="header__area">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="header__main">
-                    <div class="header__logo">
-                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+        <div class="header__main">
+            <div class="header__logo">
+                <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+            </div>
+            <div class="header__menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="404.html">Error Page</a></li>
+                </ul>
+            </div>
+            <div class="header__widgets">
+                <div class="dropdown">
+                    <div role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="language__item">
+                            <img src="assets/images/english.png" alt="image">
+                            <p>English</p>
+                        </div>
                     </div>
-                    <div class="header__menu">
-                        <ul>
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="404.html">Error Page</a></li>
-                        </ul>
-                    </div>
-                    <div class="header__widgets">
-                        <div class="dropdown">
-                            <div role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="language__item">
-                                    <img src="assets/images/english.png" alt="image">
-                                    <p>English</p>
-                                </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="language__item dropdown-item">
+                                <img src="assets/images/english.png" alt="image">
+                                <p>English</p>
                             </div>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div class="language__item dropdown-item">
-                                        <img src="assets/images/english.png" alt="image">
-                                        <p>English</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="language__item dropdown-item">
-                                        <img src="assets/images/bangla.png" alt="image">
-                                        <p>Bangla</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="language__item dropdown-item">
-                                        <img src="assets/images/hindi.png" alt="image">
-                                        <p>Hindi</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="header__login">
-                            <a href="#" class="btn btn--base">Sign in</a>
-                            <!-- <div class="dropdown">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Account
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                                </ul>
-                            </div> -->
-                        </div>
-                    </div>
-                    <span class="menu__open"><i class="fa-solid fa-bars"></i></span>
+                        </li>
+                        <li>
+                            <div class="language__item dropdown-item">
+                                <img src="assets/images/bangla.png" alt="image">
+                                <p>Bangla</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="language__item dropdown-item">
+                                <img src="assets/images/hindi.png" alt="image">
+                                <p>Hindi</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__login">
+                    <a href="#" class="btn btn--base">Sign in</a>
                 </div>
             </div>
+            <span class="menu__open"><i class="fa-solid fa-bars"></i></span>
         </div>
     </div>
 </header>
 <!-- ==================== Header End Here ==================== -->
+
 <main>
 
-    
+    <!--========================== Banner Section Start ==========================-->
+<!-- <section class="banner-section bg--img" data-background-image="assets/images/thumbs/banner.jpg">
+    <div class="container">
+        <div class="row">
+            <button href="contact.html" class="btn btn--info">Contact Us</button>
+            <div class="col-lg-6">
+                <div class="banner-content">
+                    <h1 class="banner-content__title">Got To The Powerful Money management</h1>
+                    <p class="banner-content__desc">Hyip is a bitcoin-driven internet-based speculation stage,
+                        explicitly overhauling the web-based venture local area.</p>
+                    <div class="banner-content__button d-flex align-items-center gap-3">
+
+                        <div class="counterup-item d-flex align-items-center">
+                            <div class="counterup-item__icon">
+                                <i class="icon-user-1"></i>
+                            </div>
+                            <div class="counterup-item__content">
+                                <div class="counterup-item__number">
+                                    <h4 class="counterup-item__title text-white mb-0"><span class="odometer text-black"
+                                            data-odometer-final="75">20</span>M+</h4>
+                                </div>
+                                <span class="counterup-item__text text-white mb-0">Client in the world</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!--========================== Banner Section End ==========================-->
+
+<!--==========================  Banner Section Start  ==========================-->
+<section class="banner">
+  <!-- <div class="banner__shape1">
+    <img src="assets/images/banner/banner-shape.png" alt="image">
+  </div>
+  <div class="banner__shape2">
+    <img src="assets/images/banner/banner-shape.png" alt="image">
+  </div> -->
+  <span class="banner__bg">
+    <video autoplay muted loop>
+      <source src="assets/images/banner/banner-bg1.mp4" type="video/mp4" />
+    </video>
+  </span>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="banner__content">
+          <h1 class="banner__title">
+            Instant eSIM Activation Connect Anytime,
+             <span >Anywhere!<svg class="svg__shape" xmlns="http://www.w3.org/2000/svg" width="477" height="28" viewBox="0 0 477 28" fill="none">
+<path d="M8.7063 -0.000482152C-2.88966 -0.000481645 -2.91454 10.7031 8.7063 10.7031C32.9185 10.7031 57.1306 11.425 81.3428 12.6198C65.9894 13.3416 50.6359 14.1382 35.3073 15.0094C23.8607 15.6566 23.7363 26.3602 35.3073 25.713C85.3243 22.9002 135.441 20.8093 185.607 19.4402C280.639 26.3353 375.572 32.7823 469.982 19.1166C480.159 17.648 477.497 8.86105 467.593 8.61213C373.009 6.09804 278.3 6.14784 183.79 8.78641C125.363 4.45519 66.935 -0.0253904 8.7063 0.0243962L8.7063 -0.000482152Z" fill="currentColor"/>
+</svg></span>
+          </h1>
+          <p class="banner__desc">
+            Stay connected anywhere with global coverage, instant eSIM setup,
+            and the best-value data plans.
+          </p>
+          <div class="banner__input">
+            <input type="text" class="form-control" placeholder="Search your destintion">
+            <button class="search__btn">Submit</button>
+          </div>
+        </div>
+
+        <div class="banner__thumb text-center">
+<img src="assets/images/banner/banner-thumb.png" alt="image">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!--==========================  Banner Section End  ==========================-->
+
 
 </main>
 

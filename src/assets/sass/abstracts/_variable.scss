@@ -1,16 +1,16 @@
 /* Font Family*/
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* ========================= Css Variables Start ======================== */
 :root {
   /* Font Family */
-  --heading-font: 'Ubuntu', sans-serif;
-  --body-font: 'Geologica', sans-serif;
+  --heading-font: 'Parkinsans', sans-serif;
+  --body-font: 'Poppins', sans-serif;
 
   /* ========================= Theme Color Start ============================= */
-  @include colorVariable(--base, #a640fa, 10);
+  @include colorVariable(--base, #1457f2, 10);
 
-  @include colorVariable(--base-two, #0093ce, 10);
+  @include colorVariable(--base-two, #2b8cfc, 10);
   /* ========================= Theme Color End ============================= */
 
   /* ========================= Color Variables Start =========================== */
@@ -18,13 +18,13 @@
   @include colorVariable(--white, #fff);
 
   // Body Color
-  @include colorVariable(--body-color, #141414);
+  @include colorVariable(--body-color, #555);
 
   // Body BG
   @include colorVariable(--body-bg, #fff);
 
   // heading-color
-  @include colorVariable(--heading-color, #282828);
+  @include colorVariable(--heading-color, #222);
 
   // Black Color
   @include colorVariable(--black, #000);
@@ -33,7 +33,7 @@
   @include colorVariable(--border-color, #e0e0e0);
 
   // Section Background
-  @include colorVariable(--section-bg, #dddddd);
+  @include colorVariable(--section-bg, #f4f6f9);
 
   /* ================================ Box Shadow Start =============================== */
   --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05);

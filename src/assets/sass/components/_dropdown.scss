@@ -1,11 +1,20 @@
 /* ======================  Dropdown Section Start  ======================*/
 .dropdown-toggle {
-    color: hsl(var(--heading-color));
+    color: hsl(var(--white));
     font-size: 16px;
     font-weight: 400;
     display: flex;
     align-items: center;
     gap: 7px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+
+    &:hover,
+    &.show {
+        color: hsl(var(--base));
+        background-color: hsl(var(--base) / 0.06);
+    }
 }
 
 .dropdown-toggle::after {
@@ -28,32 +37,45 @@
 }
 
 .dropdown-menu {
-    min-width: max-content;
-    padding: 0;
+    min-width: 142px;
+    padding: 8px;
     font-size: 14px;
     color: hsl(var(--heading-color));
     background-color: hsl(var(--white));
-    border: 0;
-    border-radius: 0;
+    border: 1px solid hsl(var(--base) / 0.08);
+    border-radius: 14px;
     white-space: nowrap;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 18px 45px hsl(var(--black) / 0.1);
+    margin-top: 10px !important;
+    overflow: hidden;
+    animation: dropdownFade 0.2s ease;
 }
 
 .dropdown-item {
-    padding: 8px 18px;
-    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    padding: 10px 12px;
+    font-weight: 500;
     color: hsl(var(--body-color));
     white-space: nowrap;
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid hsl(var(--border-color) / 0.3);
-    border-radius: 0;
+    border-radius: 9px;
     font-size: 14px;
-    transition: 0.3s;
+    transition: 0.25s;
 
-    &:hover {
-        color: hsl(var(--white));
-        background-color: hsl(var(--base));
+  
+
+    img {
+        flex: 0 0 auto;
+    }
+
+    &:hover,
+    &:focus {
+        color: hsl(var(--base));
+        background-color: hsl(var(--base) / 0.08);
     }
 }
 
@@ -61,6 +83,16 @@
 .dropdown-item:active {
     color: hsl(var(--white));
     background-color: hsl(var(--base));
+}
+
+@keyframes dropdownFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* ======================  Dropdown Section End  ======================*/
