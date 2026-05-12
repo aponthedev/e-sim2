@@ -85,18 +85,6 @@
   // ========================= Brand Swiper Js End =====================
 
   // ========================= Odometer Js Start ===================
-  if ($('.odometer').length > 0) {
-    $(window).on('scroll', function () {
-      $('.odometer').each(function () {
-        if ($(this).isInViewport()) {
-          if (!$(this).data('odometer-started')) {
-            $(this).data('odometer-started', true);
-            this.innerHTML = $(this).data('odometer-final');
-          }
-        }
-      });
-    });
-  }
   // isInViewport helper function
   $.fn.isInViewport = function () {
     let elementTop = $(this).offset().top;
@@ -105,6 +93,22 @@
     let viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
   };
+
+  if ($('.odometer').length > 0) {
+    function startOdometer() {
+      $('.odometer').each(function () {
+        if ($(this).isInViewport()) {
+          if (!$(this).data('odometer-started')) {
+            $(this).data('odometer-started', true);
+            this.innerHTML = $(this).data('odometer-final');
+          }
+        }
+      });
+    }
+
+    $(window).on('scroll load', startOdometer);
+    startOdometer();
+  }
   // ========================= Odometer Js End ===================
 
   // ========================= Magnific Popup Js Start ===================
