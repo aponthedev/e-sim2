@@ -77,7 +77,7 @@
         },
         1499: {
           spaceBetween: 60,
-          slidesPerView: 8,
+          slidesPerView: 6,
         },
       },
     });

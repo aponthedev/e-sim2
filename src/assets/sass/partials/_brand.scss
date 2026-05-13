@@ -1,17 +1,11 @@
 /* ======================  Brand Section Start  ======================*/
-.brand__area {
-  background-color: hsl(var(--black));
-  padding-block: 20px;
-}
 
-@media screen and (max-width: 1199px) {
-  .brand__area {
-    padding-block: 30px;
-  }
-}
-
-[data-theme='dark'] .brand__area {
-  background-color: hsl(var(--black) / 0.1);
+.banner .brand__area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 33px;
+  z-index: 6;
 }
 
 .slide-transition {
@@ -28,5 +22,11 @@
   width: 100%;
   filter: invert(1) brightness(100);
 }
-
+.brand__wrap {
+  background-color: hsl(var(--base));
+  padding: 40px;
+  border-radius: 8px;
+  border: 10px solid hsl(var(--section-bg));
+  border-radius: 502px;
+}
 /* ======================  Brand Section End  ======================*/

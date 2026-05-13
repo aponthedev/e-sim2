@@ -3537,9 +3537,6 @@ input[type=number] {
     position: fixed;
     top: 0;
     padding: 10px 0;
-    background-color: hsl(var(--black)/0.72);
-    box-shadow: 0 14px 35px hsl(var(--black)/0.18);
-    backdrop-filter: blur(18px);
     animation: slide-down 0.6s;
     width: 100%;
 }
@@ -4478,27 +4475,23 @@ input[type=number] {
     min-height: 100vh;
     overflow: hidden;
     padding-top: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 245px;
 }
 
-.banner__shape1 {
+.banner__shape {
     position: absolute;
-    bottom: 116px;
-    left: 20px;
-    z-index: 2;
-    max-width: 190px;
-    animation: topBottom 3s ease-in-out infinite;
-    opacity: 0.3;
+    left: -1px;
+    right: -1px;
+    bottom: -7px;
+    z-index: 5;
+    display: block;
+    color: hsl(var(--section-bg));
 }
 
-.banner__shape2 {
-    position: absolute;
-    bottom: 116px;
-    right: 20px;
-    z-index: 2;
-    max-width: 190px;
-    animation: topBottom 3s ease-in-out infinite;
-    opacity: 0.3;
+.banner__shape svg {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .banner::after {
@@ -4628,19 +4621,12 @@ input[type=number] {
     }
 }
 /* ======================  Brand Section Start  ======================*/
-.brand__area {
-    background-color: hsl(var(--black));
-    padding-block: 20px;
-}
-
-@media screen and (max-width: 1199px) {
-    .brand__area {
-        padding-block: 30px;
-    }
-}
-
-[data-theme=dark] .brand__area {
-    background-color: hsl(var(--black)/0.1);
+.banner .brand__area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 33px;
+    z-index: 6;
 }
 
 .slide-transition {
@@ -4658,10 +4644,19 @@ input[type=number] {
     filter: invert(1) brightness(100);
 }
 
+.brand__wrap {
+    background-color: hsl(var(--base));
+    padding: 40px;
+    border-radius: 8px;
+    border: 10px solid hsl(var(--section-bg));
+    border-radius: 502px;
+}
+
 /* ======================  Brand Section End  ======================*/
 /* ======================  Section Start  ======================*/
 .country {
     background-color: hsl(var(--section-bg));
+    padding-top: 60px;
 }
 
 .country__top {
@@ -5275,4 +5270,321 @@ input[type=number] {
 }
 
 /* ======================  About Section End  ======================*/
+/* ======================  Process Section Start  ======================*/
+.process {
+    background-color: hsl(var(--section-bg));
+}
+
+.process .container {
+    position: relative;
+}
+
+.process__heading {
+    max-width: 640px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+.process__heading span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 22px;
+    color: hsl(var(--heading-color));
+    background-color: hsl(var(--white));
+    border: 1px solid hsl(var(--border-color));
+    border-radius: 999px;
+    box-shadow: 0 10px 28px hsl(var(--black)/0.05);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.process__heading h2 {
+    color: hsl(var(--heading-color));
+    font-size: 46px;
+    line-height: 1.08;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 991px) {
+    .process__heading h2 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .process__heading h2 {
+        font-size: 30px;
+    }
+}
+
+.process__heading p {
+    color: hsl(var(--body-color));
+    margin-bottom: 0;
+}
+
+.process__timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 180px;
+    row-gap: 54px;
+}
+
+@media screen and (max-width: 1199px) {
+    .process__timeline {
+        column-gap: 110px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .process__timeline {
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+        padding-left: 44px;
+    }
+}
+
+.process__line {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    bottom: 96px;
+    width: 3px;
+    transform: translateX(-50%);
+    background-color: hsl(var(--base));
+}
+
+@media screen and (max-width: 991px) {
+    .process__line {
+        left: 16px;
+        top: 0;
+        bottom: 0;
+        transform: none;
+    }
+}
+
+.process__dot {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    transform: translateX(-50%);
+    background-color: hsl(var(--base));
+    border: 4px solid hsl(var(--white));
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px hsl(var(--base));
+}
+
+.process__dot--top {
+    top: 0;
+}
+
+.process__dot--middle {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.process__dot--bottom {
+    bottom: 78px;
+}
+
+@media screen and (max-width: 991px) {
+    .process__dot {
+        left: 16px;
+        transform: translateX(-50%);
+    }
+
+    .process__dot--middle {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.process__item {
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+    .process__item {
+        min-height: auto;
+    }
+}
+
+.process__item--text {
+    align-items: flex-start;
+    max-width: 430px;
+}
+
+.process__item--text h3 {
+    color: hsl(var(--heading-color));
+    font-size: 25px;
+    line-height: 1.18;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.process__item--text p {
+    color: hsl(var(--body-color));
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.process__step {
+    display: inline-flex;
+    align-items: center;
+    color: hsl(var(--base));
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.process__item--visual {
+    justify-content: flex-end;
+}
+
+.process__image-card {
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    padding: 28px 28px 0;
+    border: 2px solid hsl(var(--base));
+    border-radius: 18px;
+    background-color: hsl(var(--base-l-300));
+}
+
+.process__image-card::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    bottom: 28px;
+    width: 160px;
+    height: 70px;
+    border: 22px solid hsl(var(--base));
+    border-color: hsl(var(--base)) transparent transparent transparent;
+    border-radius: 50%;
+}
+
+.process__image-card::after {
+    content: "";
+    position: absolute;
+    right: -42px;
+    top: 34px;
+    width: 150px;
+    height: 150px;
+    border: 22px solid hsl(var(--base)/0.18);
+    border-radius: 50%;
+}
+
+.process__image-card img {
+    position: relative;
+    z-index: 3;
+    max-height: 250px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    animation: processImageFloat 4.6s ease-in-out infinite;
+}
+
+@media screen and (max-width: 767px) {
+    .process__image-card {
+        min-height: 230px;
+        padding: 22px 18px 0;
+    }
+
+    .process__image-card img {
+        max-height: 220px;
+    }
+}
+
+.process__shape {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.process__shape--ring {
+    left: 42px;
+    top: 38px;
+    width: 94px;
+    height: 94px;
+    border: 18px solid hsl(var(--base)/0.2);
+    border-radius: 50%;
+    animation: processShapePulse 5.5s ease-in-out infinite;
+}
+
+.process__shape--pill {
+    right: 36px;
+    bottom: 34px;
+    width: 150px;
+    height: 46px;
+    background-color: hsl(var(--base)/0.22);
+    border-radius: 999px;
+    transform: rotate(-16deg);
+    animation: processShapeSlide 6s ease-in-out infinite;
+}
+
+.process__shape--dots {
+    left: 36px;
+    bottom: 34px;
+    width: 86px;
+    height: 62px;
+    opacity: 0.45;
+    background-image: radial-gradient(hsl(var(--base-d-300)) 2px, transparent 2px);
+    background-size: 14px 14px;
+    animation: processDotsDrift 7s linear infinite;
+}
+
+@keyframes processImageFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes processShapePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.72;
+    }
+}
+
+@keyframes processShapeSlide {
+    0%, 100% {
+        transform: translateX(0) rotate(-16deg);
+    }
+
+    50% {
+        transform: translateX(-12px) rotate(-16deg);
+    }
+}
+
+@keyframes processDotsDrift {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 28px 28px;
+    }
+}
+/* ======================  Process Section End  ======================*/
 /*# sourceMappingURL=main.css.map */

@@ -4,25 +4,22 @@
   min-height: 100vh;
   overflow: hidden;
   padding-top: 200px;
-  padding-bottom: 100px;
+  padding-bottom: 245px;
 
-  &__shape1 {
+  &__shape {
     position: absolute;
-    bottom: 116px;
-    left: 20px;
-    z-index: 2;
-    max-width: 190px;
-    animation: topBottom 3s ease-in-out infinite;
-    opacity: 0.3;
-  }
-  &__shape2 {
-    position: absolute;
-    bottom: 116px;
-    right: 20px;
-    z-index: 2;
-    max-width: 190px;
-    animation: topBottom 3s ease-in-out infinite;
-    opacity: 0.3;
+    left: -1px;
+    right: -1px;
+    bottom: -7px;
+    z-index: 5;
+    display: block;
+    color: hsl(var(--section-bg));
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 
   &::after {
