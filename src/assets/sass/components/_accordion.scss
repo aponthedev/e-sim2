@@ -3,7 +3,7 @@
   .accordion-item {
     border: 1px solid hsl(var(--black) / 0.09);
     background-color: transparent !important;
-    border-radius: 5px;
+    border-radius: 16px;
     overflow: hidden;
 
     &:not(:last-child) {
@@ -57,12 +57,12 @@
 
     &:not(.collapsed) {
       color: hsl(var(--white));
-      background-color: hsl(var(--black)) !important;
+      background-color: hsl(var(--base)) !important;
       box-shadow: none;
 
       &::after {
         background-image: none;
-        color: hsl(var(--base));
+        color: hsl(var(--white));
       }
     }
 
@@ -77,14 +77,23 @@
         top: 50%;
         transform: translateY(-50%);
         right: 15px;
-        height: unset;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(var(--white) / 0.2);
+        border-radius: 50%;
       }
     }
 
     &[aria-expanded='false'] {
       &::after {
         content: '\f067';
-        color: hsl(var(--body-color));
+        color: hsl(var(--white));
+        height: 35px;
+        width: 35px;
+        background-color: hsl(var(--base));
       }
     }
   }

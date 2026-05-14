@@ -1,0 +1,60 @@
+/* ======================  Faq Section Start  ======================*/
+.faq {
+  &__content {
+    margin-right: 58px;
+  }
+  &__info {
+    &__desc {
+      margin-bottom: 20px;
+    }
+    &__content {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+      &__icon {
+        height: 40px;
+        width: 40px;
+        background-color: hsl(var(--base) / 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: hsl(var(--base));
+        border-radius: 10px;
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      &__subtitle {
+        font-size: 16px;
+      }
+
+      &__title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.faq .section-heading h2 span svg {
+  max-width: 333px;
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+
+.faq .section-heading {
+  border-bottom: 1px solid hsl(var(--border-color));
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.faq .section-heading h2 {
+  font-size: 54px;
+}
+/* ======================  Faq Section End  ======================*/
