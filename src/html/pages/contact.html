@@ -1,0 +1,121 @@
+@@include('../partials/_template-top.html')
+@@include('../partials/_header.html')
+<main>
+
+    @@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Contact Us"
+    })
+
+    <!--========================== Contact Section Start ==========================-->
+    <section class="contact-section py-100">
+        <div class="container">
+            <div class="row gy-5">
+                <!-- Contact Info Column -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <!-- Phone -->
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="contact-info__text">
+                                <span class="contact-info__label">Have Question ?</span>
+                                <h4 class="contact-info__value">+880 (123) 456 789</h4>
+                            </div>
+                        </div>
+                        <!-- Divider -->
+                        <div class="contact-info__divider"></div>
+                        <!-- Email -->
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div class="contact-info__text">
+                                <span class="contact-info__label">Write Email</span>
+                                <h4 class="contact-info__value">support@esim.com</h4>
+                            </div>
+                        </div>
+                        <!-- Divider -->
+                        <div class="contact-info__divider"></div>
+                        <!-- Live Chat -->
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div class="contact-info__text">
+                                <span class="contact-info__label">Live Chat</span>
+                                <h4 class="contact-info__value">livechat@esim.com</h4>
+                            </div>
+                        </div>
+                        <!-- Divider -->
+                        <div class="contact-info__divider"></div>
+                        <!-- Location -->
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-info__text">
+                                <span class="contact-info__label">Our Location</span>
+                                <h4 class="contact-info__value">123 Fifth Avenue, New York</h4>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="contact-social">
+                            <a href="#" class="contact-social__link contact-social__link--facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="contact-social__link contact-social__link--twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="contact-social__link contact-social__link--instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="contact-social__link contact-social__link--linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="contact-social__link contact-social__link--pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <form action="#" id="contact-form">
+                            <div class="row gy-4">
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="contact-name">Your Name</label>
+                                    <input class="form-control contact-form__input" type="text" id="contact-name" placeholder="Name..." required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="contact-email">Your Email</label>
+                                    <input class="form-control contact-form__input" type="email" id="contact-email" placeholder="Email..." required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="contact-phone">Phone No</label>
+                                    <input class="form-control contact-form__input" type="tel" id="contact-phone" placeholder="Phone...">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="contact-form__label" for="contact-option">Choose a Option</label>
+                                    <select class="form-select contact-form__select select2" id="contact-option">
+                                        <option value="" disabled selected>Select Option..</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="billing">Billing Issue</option>
+                                        <option value="partnership">Partnership</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label class="contact-form__label" for="contact-message">Write Message</label>
+                                    <textarea class="form-control contact-form__input contact-form__textarea" id="contact-message" placeholder="Message..." rows="5"></textarea>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn--base">
+                                        Submit Now                                      
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================== Contact Section End ==========================-->
+
+</main>
+@@include('../partials/_footer.html')
+@@include('../partials/_template-bottom.html')

@@ -242,6 +242,14 @@
   left: -10px;
   bottom: -10px;
   z-index: -1;
+
+  @include md-screen {
+    max-width: 214px;
+  }
+
+  @include msm-screen {
+    max-width: 144px;
+  }
 }
 
 /* ======================  Testimonial Section End  ======================*/

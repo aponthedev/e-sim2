@@ -5,6 +5,11 @@
     margin-right: 58px;
   }
   &__info {
+    &__title {
+      @include md-screen {
+        font-size: 20px;
+      }
+    }
     &__desc {
       margin-bottom: 20px;
     }
@@ -57,5 +62,22 @@
 
 .faq .section-heading h2 {
   font-size: 54px;
+
+  @include xl-screen {
+    font-size: 40px;
+  }
+
+  @include msm-screen {
+    font-size: 30px;
+  }
+}
+.faq .section-heading h2 span svg {
+  @include xl-screen {
+    max-width: 226px;
+  }
+
+  @include msm-screen {
+    max-width: 160px;
+  }
 }
 /* ======================  Faq Section End  ======================*/

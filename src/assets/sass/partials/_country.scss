@@ -118,7 +118,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 30px;
     overflow-x: auto;
     scrollbar-width: none;
 
@@ -251,6 +250,10 @@
       color: hsl(var(--white));
       font-size: 30px;
       margin-bottom: 12px;
+
+      @include msm-screen {
+        font-size: 24px;
+      }
     }
 
     p {

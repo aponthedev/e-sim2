@@ -57,7 +57,7 @@
       gap: 42px 30px;
     }
 
-    @include md-screen {
+    @include msm-screen {
       grid-template-columns: 1fr;
     }
   }
@@ -74,6 +74,13 @@
       top: 78%;
       width: 31%;
       transform: rotate(-29deg);
+
+      @include xl-screen {
+        left: 12%;
+        top: 82%;
+        width: 31%;
+        transform: rotate(322deg);
+      }
     }
 
     &--two {
@@ -88,6 +95,13 @@
       top: 82%;
       width: 31%;
       transform: rotate(328deg);
+
+      @include xl-screen {
+        left: 63%;
+        top: 82%;
+        width: 31%;
+        transform: rotate(325deg);
+      }
     }
 
     @include lg-screen {
@@ -211,4 +225,9 @@
   }
 }
 
+@media screen and (max-width: 991px) {
+  .section-heading h2 span svg {
+    max-width: 152px;
+  }
+}
 /* ======================  How It Work Section End  ======================*/

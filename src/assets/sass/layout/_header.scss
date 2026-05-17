@@ -126,10 +126,11 @@
     gap: 24px;
     min-height: 66px;
     padding: 8px 18px;
-    background-color: hsl(var(--black) / 0.16);
+    background-color: hsl(var(--black) / 0.4);
     border: 1px solid hsl(var(--white) / 0.1);
     border-radius: 18px;
     backdrop-filter: blur(16px);
+    padding-right: 10px;
 
     @include md-screen {
       min-height: 58px;

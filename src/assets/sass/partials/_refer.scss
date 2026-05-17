@@ -85,6 +85,10 @@
     padding: 0 20px;
     margin-bottom: 50px;
 
+    @include md-screen {
+      margin-bottom: 0 !important;
+    }
+
     &--1 {
       margin-top: 80px;
     }
@@ -117,6 +121,20 @@
     z-index: 2;
     transition: all 0.3s ease;
     color: hsl(var(--white));
+
+    @include sm-screen {
+      height: 70px;
+      width: 70px;
+      font-size: 20px;
+    }
+
+    @include xsm-screen {
+      height: 50px;
+      width: 50px;
+      font-size: 20px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+    }
 
     &.box-danger {
       background-color: hsl(var(--success));
@@ -152,6 +170,10 @@
     margin-bottom: 12px;
     position: relative;
     z-index: 2;
+
+    @include xsm-screen {
+      font-size: 18px;
+    }
   }
 
   &-desc {
@@ -177,6 +199,12 @@
     line-height: 1;
     pointer-events: none;
     font-family: var(--heading-font);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .refer .section-heading h2 span svg {
+    max-width: 106px;
   }
 }
 /* ====================== Refer Section End ====================== */

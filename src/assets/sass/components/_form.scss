@@ -40,7 +40,7 @@ label.required:after {
 
 /* Form Control Start */
 .form-control {
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: 400;
   outline: none;
   width: 100%;
@@ -52,12 +52,12 @@ label.required:after {
 
   &::placeholder {
     color: hsl(var(--black) / 0.6);
-    font-size: 14px;
+    font-size: 16px;
   }
 
   &:focus {
     background-color: hsl(var(--white));
-    border-color: hsl(var(--black) / 0.2);
+    border-color: hsl(var(--base));
     box-shadow: none;
   }
 
@@ -149,7 +149,7 @@ select:-webkit-autofill {
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
-  color: hsl(var(--black)/0.4);
+  color: hsl(var(--black) / 0.4);
 }
 
 .password-show-hide .open-eye-icon {
@@ -345,10 +345,14 @@ input[type='number'] {
 /* --======================Custom Input group Start ======================*/
 
 .input-group {
-  border-radius: 5px;
+  border-radius: 15px;
   border: 1px solid hsl(var(--black) / 0.1);
+  overflow: hidden;
 
-  &> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  &
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+      .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -364,13 +368,13 @@ input[type='number'] {
     }
   }
 
-  .input-group-text+.form-control {
+  .input-group-text + .form-control {
     padding-right: 20px;
     padding-left: 10px;
   }
 
   &:focus-within {
-    border: 1px solid hsl(var(--black) / 0.2);
+    border: 1px solid hsl(var(--base));
   }
 
   .input-group-text {

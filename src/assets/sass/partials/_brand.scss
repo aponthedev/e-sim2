@@ -6,6 +6,10 @@
   right: 0;
   bottom: 33px;
   z-index: 6;
+
+  @include md-screen {
+    bottom: -9px;
+  }
 }
 
 .slide-transition {
@@ -28,5 +32,9 @@
   border-radius: 8px;
   border: 10px solid hsl(var(--section-bg));
   border-radius: 502px;
+
+  @include sm-screen {
+    padding: 24px;
+  }
 }
 /* ======================  Brand Section End  ======================*/

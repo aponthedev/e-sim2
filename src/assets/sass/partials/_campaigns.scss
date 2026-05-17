@@ -74,7 +74,7 @@
   &__badge {
     display: inline-block;
     padding: 6px 16px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: hsl(var(--base));
     color: hsl(var(--white));
     border-radius: 30px;
     font-size: 13px;
@@ -92,13 +92,18 @@
   &__title {
     font-size: 32px;
     font-weight: 800;
-    color: hsl(var(--white));
+    color: hsl(var(--black));
     margin-bottom: 15px;
     line-height: 1.2;
+
+    @include xl-screen {
+      font-size: 25px;
+      font-weight: 600;
+    }
   }
 
   &__desc {
-    color: hsl(var(--white));
+    color: hsl(var(--black) / 0.8);
     font-size: 16px;
     margin-bottom: 30px;
     max-width: 320px;
@@ -114,27 +119,32 @@
   &__price {
     font-size: 24px;
     font-weight: 700;
-    color: hsl(var(--white));
+    color: hsl(var(--black));
+
+    @include xl-screen {
+      font-size: 20px;
+      font-weight: 600;
+    }
   }
 
   &__btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: hsl(var(--white));
-    color: hsl(var(--heading-color));
+    background-color: hsl(var(--base));
+    color: hsl(var(--white));
     padding: 12px 24px;
     border-radius: 12px;
     font-weight: 700;
     font-size: 15px;
     backdrop-filter: blur(10px);
-    border: 1px solid hsl(var(--border-color));
+
     transition: all 0.3s ease;
     text-decoration: none;
 
     &:hover {
       background-color: hsl(var(--white));
-      border-color: hsl(var(--white));
+      color: hsl(var(--black));
     }
   }
 
@@ -156,28 +166,22 @@
 
   &--color-1 {
     .campaign-card__bg {
-      background: linear-gradient(
-        135deg,
-        hsl(var(--base)) 0%,
-        rgba(var(--base), 0.8) 100%
-      );
-      background-color: hsl(var(--base));
+      background-color: hsl(var(--base) / 0.5);
     }
     &:hover .campaign-card__btn {
       color: hsl(var(--base));
     }
     .campaign-card__shape svg {
       animation: floatShape1 6s ease-in-out infinite;
+      color: hsl(var(--base));
     }
   }
 
   &--color-2 {
     .campaign-card__bg {
-      background: linear-gradient(
-        135deg,
-        hsl(var(--warning)) 0%,
-        hsl(var(--warning)) 100%
-      );
+      background-color: hsl(var(--warning) / 0.2);
+    }
+    .campaign-card__btn {
       background-color: hsl(var(--warning));
     }
     &:hover .campaign-card__btn {
@@ -185,16 +189,18 @@
     }
     .campaign-card__shape svg {
       animation: floatShape2 5s ease-in-out infinite;
+      color: hsl(var(--warning));
     }
   }
 
   &--color-3 {
     .campaign-card__bg {
-      background: linear-gradient(
-        135deg,
-        hsl(var(--info)) 0%,
-        hsl(var(--info)) 100%
-      );
+      background-color: hsl(var(--info) / 0.2);
+    }
+    .campaign-card__badge {
+      background-color: hsl(var(--info));
+    }
+    .campaign-card__btn {
       background-color: hsl(var(--info));
     }
     &:hover .campaign-card__btn {
@@ -202,16 +208,18 @@
     }
     .campaign-card__shape svg {
       animation: spinShape 15s linear infinite;
+      color: hsl(var(--info));
     }
   }
 
   &--color-4 {
     .campaign-card__bg {
-      background: linear-gradient(
-        135deg,
-        hsl(var(--success)) 0%,
-        hsl(var(--success)) 100%
-      );
+      background-color: hsl(var(--success) / 0.1);
+    }
+    .campaign-card__badge {
+      background-color: hsl(var(--success));
+    }
+    .campaign-card__btn {
       background-color: hsl(var(--success));
     }
     &:hover .campaign-card__btn {
@@ -219,6 +227,7 @@
     }
     .campaign-card__shape svg {
       animation: pulseShape 4s ease-in-out infinite;
+      color: hsl(var(--success)) !important;
     }
   }
 }
@@ -305,5 +314,23 @@
   left: -10px;
   bottom: -10px;
   z-index: -1;
+
+  @include lg-screen {
+    max-width: 228px;
+  }
+
+  @include msm-screen {
+    max-width: 155px;
+  }
+}
+
+.campaigns .section-heading h2 {
+  font-size: 45px;
+  margin-bottom: 16px;
+  font-weight: 600;
+
+  @include msm-screen {
+    font-size: 30px;
+  }
 }
 /* ====================== Campaigns Section End ====================== */

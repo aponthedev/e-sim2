@@ -6,6 +6,15 @@
   padding-top: 200px;
   padding-bottom: 245px;
 
+  @include lg-screen {
+    padding-bottom: 210px;
+  }
+
+  @include md-screen {
+    padding-bottom: 150px;
+    padding-top: 158px;
+  }
+
   &__shape {
     position: absolute;
     left: -1px;
@@ -69,6 +78,18 @@
     font-weight: 700;
     line-height: 1.08;
     margin-bottom: 32px;
+
+    @include xl-screen {
+      font-size: 56px;
+    }
+
+    @include lg-screen {
+      font-size: 45px;
+    }
+
+    @include sm-screen {
+      font-size: 33px;
+    }
     span {
       position: relative;
       z-index: 1;
@@ -82,6 +103,18 @@
       z-index: -1;
       width: 386px;
       color: hsl(var(--base-two));
+
+      @include xl-screen {
+        width: 307px;
+      }
+
+      @include lg-screen {
+        width: 250px;
+      }
+
+      @include sm-screen {
+        width: 184px;
+      }
     }
   }
 

@@ -27,6 +27,18 @@
   font-size: 60px;
   margin-bottom: 16px;
   font-weight: 600;
+
+  @include md-screen {
+    font-size: 45px;
+  }
+
+  @include sm-screen {
+    font-size: 40px;
+  }
+
+  @include msm-screen {
+    font-size: 30px;
+  }
   span {
     position: relative;
     z-index: 1;

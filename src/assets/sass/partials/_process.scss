@@ -63,25 +63,41 @@
     @include md-screen {
       grid-template-columns: 1fr;
       row-gap: 28px;
-      padding-left: 44px;
+      padding-left: 0;
     }
   }
 
-  &__line {
+  &__line-track {
     position: absolute;
     left: 50%;
     top: 10px;
     bottom: 96px;
     width: 3px;
     transform: translateX(-50%);
-    background-color: hsl(var(--base));
+    z-index: 0;
 
     @include md-screen {
-      left: 16px;
-      top: 0;
-      bottom: 0;
-      transform: none;
+      display: none;
     }
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--base) / 0.15);
+  }
+
+  &__line-active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background-color: hsl(var(--base));
+    transition: height 0.1s ease-out;
   }
 
   &__dot {
@@ -110,13 +126,7 @@
     }
 
     @include md-screen {
-      left: 16px;
-      transform: translateX(-50%);
-
-      &--middle {
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
+      display: none;
     }
   }
 
@@ -128,6 +138,48 @@
 
     @include md-screen {
       min-height: auto;
+    }
+
+    &:nth-child(5) {
+      order: 1;
+      @include md-screen {
+        order: 0;
+      }
+    }
+
+    &:nth-child(6) {
+      order: 2;
+      @include md-screen {
+        order: 0;
+      }
+    }
+
+    &:nth-child(7) {
+      order: 4;
+      @include md-screen {
+        order: 0;
+      }
+    }
+
+    &:nth-child(8) {
+      order: 3;
+      @include md-screen {
+        order: 0;
+      }
+    }
+
+    &:nth-child(9) {
+      order: 5;
+      @include md-screen {
+        order: 0;
+      }
+    }
+
+    &:nth-child(10) {
+      order: 6;
+      @include md-screen {
+        order: 0;
+      }
     }
   }
 
@@ -141,12 +193,25 @@
       line-height: 1.18;
       font-weight: 800;
       margin-bottom: 18px;
+
+      @include msm-screen {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      @include xsm-screen {
+        font-size: 18px;
+      }
     }
 
     p {
       color: hsl(var(--body-color));
       line-height: 1.7;
       margin-bottom: 0;
+      @include msm-screen {
+        font-size: 14px;
+      }
     }
   }
 
@@ -302,6 +367,22 @@
 
   100% {
     background-position: 28px 28px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .process .section-heading h2 span svg {
+    max-width: 182px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .process .section-heading h2 span svg {
+    max-width: 132px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .process .section-heading h2 span svg {
+    max-width: 99px;
   }
 }
 

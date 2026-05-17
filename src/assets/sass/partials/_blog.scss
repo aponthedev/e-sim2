@@ -330,4 +330,13 @@ li:hover .blog-item__meta__icon {
   transform: translateX(4px);
 }
 
+.blog-page {
+  background-color: hsl(var(--section-bg));
+}
+
+@media screen and (max-width: 575px) {
+  .blog-section .section-heading h2 span svg {
+    max-width: 97px;
+  }
+}
 /* ======================  Blog Section End  ======================*/

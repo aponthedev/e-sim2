@@ -63,17 +63,25 @@
         disableOnInteraction: false,
       },
       breakpoints: {
+        320: {
+          spaceBetween: 40,
+          slidesPerView: 2,
+        },
+        424: {
+          spaceBetween: 40,
+          slidesPerView: 2,
+        },
         576: {
           spaceBetween: 40,
-          slidesPerView: 4,
+          slidesPerView: 3,
         },
         768: {
           spaceBetween: 50,
-          slidesPerView: 5,
+          slidesPerView: 3,
         },
         1024: {
           spaceBetween: 60,
-          slidesPerView: 6,
+          slidesPerView: 4,
         },
         1499: {
           spaceBetween: 60,
@@ -111,6 +119,35 @@
   }
   // ========================= Odometer Js End ===================
 
+  // ========================= Process Scroll Line Js Start ===================
+  $(window).on('scroll load resize', function () {
+    let timeline = $('.process__timeline');
+    if (timeline.length > 0) {
+      let activeLine = $('.process__line-active');
+
+      let timelineTop = timeline.offset().top;
+      let timelineHeight = timeline.outerHeight();
+      let windowHeight = $(window).height();
+      let scrollTop = $(window).scrollTop();
+
+      let scrollStart = timelineTop - windowHeight / 2;
+      let scrollEnd = timelineTop + timelineHeight - windowHeight / 2;
+
+      let progress = 0;
+
+      if (scrollTop > scrollStart) {
+        progress =
+          ((scrollTop - scrollStart) / (scrollEnd - scrollStart)) * 100;
+      }
+
+      if (progress < 0) progress = 0;
+      if (progress > 100) progress = 100;
+
+      activeLine.css('height', progress + '%');
+    }
+  });
+  // ========================= Process Scroll Line Js End ===================
+
   // ========================= Magnific Popup Js Start ===================
   $('.promo__video__play').magnificPopup({
     type: 'iframe',
@@ -136,6 +173,13 @@
         slidesPerView: 1,
       },
       768: {
+        slidesPerView: 1,
+      },
+
+      991: {
+        slidesPerView: 1,
+      },
+      1199: {
         slidesPerView: 2,
       },
       1200: {

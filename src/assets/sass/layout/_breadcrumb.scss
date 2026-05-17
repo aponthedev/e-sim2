@@ -4,6 +4,33 @@
   margin-bottom: 0;
   padding-top: 150px;
   padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: hsl(var(--black) / 0.8);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+
+  &-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    user-select: none;
+    pointer-events: none;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
   &__wrapper {
     text-align: center;
@@ -11,7 +38,7 @@
 
   &__title {
     margin-bottom: 10px;
-    color: hsl(var(--black));
+    color: hsl(var(--white));
   }
 
   &__list {
@@ -22,7 +49,7 @@
   }
 
   &__item {
-    color: hsl(var(--black));
+    color: hsl(var(--white));
     font-weight: 400;
     font-size: 16px;
     display: flex;
@@ -31,7 +58,7 @@
     &-dot {
       width: 6px;
       height: 6px;
-      background-color: hsl(var(--black));
+      background-color: hsl(var(--white));
       border-radius: 50%;
     }
 
@@ -41,7 +68,7 @@
   }
 
   &__link {
-    color: hsl(var(--black));
+    color: hsl(var(--white));
     font-weight: 500;
 
     &:hover {

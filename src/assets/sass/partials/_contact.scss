@@ -1,0 +1,271 @@
+/* ====================== Contact Section Start ====================== */
+.contact-section {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      hsl(var(--base) / 0.06) 0%,
+      transparent 70%
+    );
+    top: -150px;
+    right: -150px;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+      circle,
+      hsl(var(--base) / 0.04) 0%,
+      transparent 70%
+    );
+    bottom: -100px;
+    left: -100px;
+    pointer-events: none;
+  }
+}
+
+/* ========== Contact Info Column ========== */
+.contact-info {
+  border-radius: 24px;
+  padding: 40px 35px;
+  height: 100%;
+  border: 2px dashed hsl(var(--base) / 0.2);
+  position: relative;
+  overflow: hidden;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: hsl(var(--base));
+    border: 1px solid hsl(var(--base) / 0.25);
+    background-color: hsl(var(--base) / 0.08);
+    transition: all 0.3s ease;
+  }
+
+  &__item:hover &__icon {
+    background-color: hsl(var(--base) / 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px hsl(var(--base) / 0.15);
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    color: hsl(var(--black));
+    margin-bottom: 4px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  &__value {
+    font-size: 18px;
+    font-weight: 600;
+    color: hsl(var(--black));
+    margin-bottom: 0;
+    font-family: var(--heading-font);
+    letter-spacing: -0.3px;
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: hsl(var(--black) / 0.2);
+    margin: 28px 0;
+  }
+}
+
+/* ========== Contact Social Links ========== */
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid hsl(var(--black) / 0.2);
+
+  &__link {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: hsl(0 0% 100%);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      color: hsl(0 0% 100%);
+    }
+
+    &--facebook {
+      background-color: #1877f2;
+      &:hover {
+        box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+      }
+    }
+
+    &--twitter {
+      background-color: #1da1f2;
+      &:hover {
+        box-shadow: 0 6px 20px rgba(29, 161, 242, 0.4);
+      }
+    }
+
+    &--instagram {
+      background: linear-gradient(
+        135deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+      );
+      &:hover {
+        box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+      }
+    }
+
+    &--linkedin {
+      background-color: #0a66c2;
+      &:hover {
+        box-shadow: 0 6px 20px rgba(10, 102, 194, 0.4);
+      }
+    }
+
+    &--pinterest {
+      background-color: #e60023;
+      &:hover {
+        box-shadow: 0 6px 20px rgba(230, 0, 35, 0.4);
+      }
+    }
+  }
+}
+
+/* ========== Contact Form Card ========== */
+.contact-form-card {
+  background-color: hsl(var(--white));
+  border-radius: 24px;
+  padding: 45px 40px;
+  border: 1px solid hsl(var(--black) / 0.1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(
+      circle,
+      hsl(var(--base) / 0.05) 0%,
+      transparent 70%
+    );
+    bottom: -100px;
+    right: -100px;
+    pointer-events: none;
+  }
+}
+
+/* ========== Contact Form Inputs ========== */
+.contact-form {
+  &__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(0 0% 100% / 0.8);
+    margin-bottom: 10px;
+  }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 991px) {
+  .contact-info {
+    padding: 35px 30px;
+
+    &__value {
+      font-size: 16px;
+    }
+  }
+
+  .contact-form-card {
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-info {
+    padding: 30px 22px;
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      font-size: 18px;
+      border-radius: 12px;
+    }
+
+    &__value {
+      font-size: 15px;
+    }
+
+    &__divider {
+      margin: 20px 0;
+    }
+  }
+
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .contact-social {
+    margin-top: 30px;
+    padding-top: 25px;
+    gap: 10px;
+
+    &__link {
+      width: 38px;
+      height: 38px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* ====================== Contact Section End ====================== */
