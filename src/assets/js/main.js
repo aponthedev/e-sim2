@@ -44,6 +44,23 @@
 
   //============================ Offcanvas Js End ==============================
 
+  //============================ Dashboard Sidebar Offcanvas Js Start ============================
+  $(document).on('click', '[data-toggle="offcanvas-sidebar"]', function () {
+    var target = $($(this).data('target'));
+    target.toggleClass('show');
+    $('.overlay').toggleClass('active');
+  });
+
+  $(document).on('click', '.dashboard-sidebar .btn--close', function () {
+    $('.dashboard-sidebar').removeClass('show');
+    $('.overlay').removeClass('active');
+  });
+
+  $(document).on('click', '.overlay', function () {
+    $('.dashboard-sidebar').removeClass('show');
+  });
+  //============================ Dashboard Sidebar Offcanvas Js End ==============================
+
   // ========================== Add Attribute For Bg Image Js Start =====================
   $('.bg--img').css('background-image', function () {
     var bg = 'url(' + $(this).data('background-image') + ')';
@@ -223,14 +240,33 @@
     distance: '60px',
     duration: 1500,
     delay: 100,
-    reset: true,
+    reset: false,
   });
 
-  sr.reveal('.class__name', {
-    delay: 60,
-    interval: 100,
-    origin: 'bottom',
-  });
+  sr.reveal(
+    '.banner__content, .banner__thumb, .brand__wrap, .banner, .about__content, .refer-wrapper, .faq__content, .how-ai__path',
+    {
+      delay: 60,
+      interval: 100,
+      origin: 'top',
+    }
+  );
+  sr.reveal(
+    '.section-heading, .country__list, .about__thumb, .process__item--text, .process__image-card, .testimonial ',
+    {
+      delay: 60,
+      interval: 100,
+      origin: 'bottom',
+    }
+  );
+  sr.reveal(
+    '.country__panel, .accordion-item, .campaign-card, .service-card, .blog-item, .cta-wrapper  ',
+    {
+      delay: 60,
+      interval: 100,
+      origin: 'bottom',
+    }
+  );
   // ========================= Scroll Reveal Js End ===================
 
   // ========================== Table Data Label Js Start =====================

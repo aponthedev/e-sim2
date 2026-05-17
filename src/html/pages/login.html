@@ -1,77 +1,103 @@
 @@include('../partials/_template-top.html')
 <main class="page-wrapper">
-    <section class="account">        
-        <div class="account-content">
-            <div class="account-header">
-                <a class="account-logo" href="index.html">
-                    <img src="assets/images/logo/logo-dark.png" alt="image">
-                </a>
-                <div class="account-heading">
-                    <h2 class="account-heading__title">Welcome Back!</h2>
-                    <p class="account-heading__subtitle">Log in to manage your eSIMs, check data usage, and buy new plans.</p>
-                </div>
-            </div>
-            <div class="account-body">
-                <div class="social-auth">
-                    <a class="social-auth__btn" href="#">
-                        <img src="assets/images/search.png" alt="image">
-                        <span>Login with Google</span>
-                    </a>
-                    <a class="social-auth__btn" href="#">
-                        <img src="assets/images/facebook.png" alt="image">
-                        <span>Login with Facebook</span>
-                    </a>
-                </div>
-
-                <div class="account-divider">
-                    <span>Or Login with</span>
-                </div>
-
-                <form class="account-form" action="!">
-                    <div class="row gy-4">
-                        <div class="col-sm-12">
-                            <label class="form--label required">Email</label>
-                            <input class="form-control form--control" type="text" placeholder="Enter your email">
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-field form-field--password">
-                                <label class="form--label required">Password</label>
-                                <div class="input-group input--group input--group-password">
-                                    <input class="form-control form--control" type="password" placeholder="Password">
-                                    <span class="input-group-text input-group-btn">
-                                        <i class="far fa-eye-slash"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="account-form__extra">
-                                <div class="form--check">
-                                    <input class="form-check-input" type="checkbox" id="remember-me">
-                                    <label class="form-check-label" for="remember-me">Remember Me</label>
-                                </div>
-                                <a href="#" class="account-form__forgot-link">Forgot Password?</a>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="w-100 btn btn--base mt-4" type="submit">
-                        Login now
-                    </button>
-                </form>
-
-                <p class="account-info">Don't have an account? <a href="ragister.html">Create now</a></p>
-            </div>
+  <section class="account">
+    <div class="account-content">
+      <div class="account-header">
+        <a class="account-logo" href="index.html">
+          <img src="assets/images/logo/logo.png" alt="image" />
+        </a>
+        <div class="account-heading">
+          <h2 class="account-heading__title">Welcome Back!</h2>
+          <p class="account-heading__subtitle">
+            Log in to manage your eSIMs, check data usage, and buy new plans.
+          </p>
+        </div>
+      </div>
+      <div class="account-body">
+        <div class="social-auth flex-wrap">
+          <a class="social-auth__btn" href="#">
+            <img src="assets/images/search.png" alt="image" />
+            <span>Login with Google</span>
+          </a>
+          <a class="social-auth__btn" href="#">
+            <img src="assets/images/facebook.png" alt="image" />
+            <span>Login with Facebook</span>
+          </a>
         </div>
 
-        <div class="account-thumb bg--img" data-background-image="assets/images/signin.png">
-            <div class="account-right__content">
-                <div class="account-right__content__header">
-                    <a href="index.html" class="account-logo-img text-center">
-                        <img src="assets/images/logo/logo.png" alt="img">
-                    </a>                    
-                </div>
-            
-            </div>
+        <div class="account-divider">
+          <span>Or Login with</span>
         </div>
-    </section>
+
+        <form class="account-form" action="!">
+          <div class="row gy-4">
+            <div class="col-sm-12">
+              <label class="form-label">Email</label>
+              <input
+                class="form-control form--control"
+                type="text"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="col-sm-12">
+              <div class="form-field password__field">
+                <label class="form-label">Password</label>
+                <div class="input-group input--group input--group-password">
+                  <input
+                    class="form-control form--control"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <span class="password-show-hide" style="cursor: pointer">
+                    <i
+                      class="far fa-eye open-eye-icon"
+                      style="display: none"
+                    ></i>
+                    <i class="far fa-eye-slash close-eye-icon"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="account-form__extra">
+                <div class="form--check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="remember-me"
+                  />
+                  <label class="form-check-label" for="remember-me"
+                    >Remember Me</label
+                  >
+                </div>
+                <a href="#" class="account-form__forgot-link"
+                  >Forgot Password?</a
+                >
+              </div>
+            </div>
+          </div>
+          <button class="w-100 btn btn--base mt-4" type="submit">
+            Login now
+          </button>
+        </form>
+
+        <p class="account-info">
+          Don't have an account? <a href="ragister.html">Create now</a>
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="account-thumb bg--img"
+      data-background-image="assets/images/signin.png"
+    >
+      <div class="account-right__content">
+        <div class="account-right__content__header">
+          <a href="index.html" class="account-logo-img text-center">
+            <img src="assets/images/logo/logo.png" alt="img" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 @@include('../partials/_template-bottom.html')

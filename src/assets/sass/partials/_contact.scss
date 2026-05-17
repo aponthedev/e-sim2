@@ -269,3 +269,14 @@
 }
 
 /* ====================== Contact Section End ====================== */
+
+.contact__map iframe {
+  padding-top: 100px;
+  width: 100%;
+  min-height: 600px;
+
+  @include sm-screen {
+    min-height: 400px;
+    padding-top: 40px;
+  }
+}

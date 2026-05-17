@@ -240,13 +240,13 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid hsl(var(--white) / 0.1);
   padding: 25px 0;
 
   .copyright-text,
   .developer-text {
     font-size: 15px;
-    color: #a0aec0;
+    color: hsl(var(--white));
 
     a {
       color: hsl(var(--white));

@@ -41,103 +41,145 @@
     <!--==========================  Overlay End  ==========================-->
 
 <main class="page-wrapper">
-    <section class="account">        
-        <div class="account-content">
-            <div class="account-header">
-                <a class="account-logo" href="index.html">
-                    <img src="assets/images/logo/logo-dark.png" alt="image">
-                </a>
-                <div class="account-heading">
-                    <h2 class="account-heading__title">Welcome Back!</h2>
-                    <p class="account-heading__subtitle">Log in to manage your eSIMs, check data usage, and buy new plans.</p>
-                </div>
-            </div>
-            <div class="account-body">
-                <div class="social-auth">
-                    <a class="social-auth__btn" href="#">
-                        <img src="assets/images/search.png" alt="image">
-                        <span>Login with Google</span>
-                    </a>
-                    <a class="social-auth__btn" href="#">
-                        <img src="assets/images/facebook.png" alt="image">
-                        <span>Login with Facebook</span>
-                    </a>
-                </div>
-
-                <div class="account-divider">
-                    <span>Or Login with</span>
-                </div>
-
-                <form class="account-form" action="!">
-                    <div class="row gy-4">
-                        <div class="col-sm-6">
-                            <label class="form-label">First Name</label>
-                            <input class="form-control form--control" type="text" placeholder="Enter your First Name">
-                        </div>
-                        <div class="col-sm-6">
-                            <label class="form-label required">Last Name</label>
-                            <input class="form-control form--control" type="text" placeholder="Enter your Last Name">
-                        </div>
-                        <div class="col-sm-12">
-                            <label class="form-label required">Email Address</label>
-                            <input class="form-control form--control" type="text" placeholder="Enter your Email Address">
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-field form-field--password">
-                                <label class="form-label required">Password</label>
-                                <div class="input-group input--group input--group-password">
-                                    <input class="form-control form--control" type="password" placeholder="Password">
-                                    <span class="input-group-text input-group-btn">
-                                        <i class="far fa-eye-slash"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-field form-field--password">
-                                <label class="form-label required">Confirm password</label>
-                                <div class="input-group input--group input--group-password">
-                                    <input class="form-control form--control" type="password" placeholder="Password">
-                                    <span class="input-group-text input-group-btn">
-                                        <i class="far fa-eye-slash"></i>
-                                    </span>
-                                </div>
-                            </div>
-                       
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                            <div class="form--check gradient mt-4">
-                                <input type="checkbox" id="agree" name="agree" class="form-check-input" required="">
-                                <label for="agree" class="form-check-label">
-                                    I agree with
-                                    <a href="#" class="fs-14 ms-1" target="_blank">Privacy Policy</a>
-                                    ,
-                                    <a href="#" class="fs-14 ms-1" target="_blank">Terms of Service</a>
-                                </label>
-                            </div>
-                        </div>
-                    <button class="w-100 btn btn--base mt-4" type="submit">
-                        Login now
-                    </button>
-                </form>
-
-                <p class="account-info">Don't have an account? <a href="ragister.html">Create now</a></p>
-            </div>
+  <section class="account">
+    <div class="account-content">
+      <div class="account-header">
+        <a class="account-logo" href="index.html">
+          <img src="assets/images/logo/logo.png" alt="image" />
+        </a>
+        <div class="account-heading">
+          <h2 class="account-heading__title">Welcome Back!</h2>
+          <p class="account-heading__subtitle">
+            Log in to manage your eSIMs, check data usage, and buy new plans.
+          </p>
+        </div>
+      </div>
+      <div class="account-body">
+        <div class="social-auth flex-wrap">
+          <a class="social-auth__btn" href="#">
+            <img src="assets/images/search.png" alt="image" />
+            <span>Login with Google</span>
+          </a>
+          <a class="social-auth__btn" href="#">
+            <img src="assets/images/facebook.png" alt="image" />
+            <span>Login with Facebook</span>
+          </a>
         </div>
 
-        <div class="account-thumb bg--img" data-background-image="assets/images/signup.png">
-            <div class="account-right__content">
-                <div class="account-right__content__header">
-                    <a href="index.html" class="account-logo-img text-center">
-                        <img src="assets/images/logo/logo.png" alt="img">
-                    </a>                    
-                </div>
-            
-            </div>
+        <div class="account-divider">
+          <span>Or Login with</span>
         </div>
-    </section>
+
+        <form class="account-form" action="!">
+          <div class="row gy-4">
+            <div class="col-sm-6">
+              <label class="form-label">First Name</label>
+              <input
+                class="form-control form--control"
+                type="text"
+                placeholder="Enter your First Name"
+              />
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">Last Name</label>
+              <input
+                class="form-control form--control"
+                type="text"
+                placeholder="Enter your Last Name"
+              />
+            </div>
+            <div class="col-sm-12">
+              <label class="form-label">Email Address</label>
+              <input
+                class="form-control form--control"
+                type="text"
+                placeholder="Enter your Email Address"
+              />
+            </div>
+            <div class="col-sm-6">
+              <div class="form-field password__field">
+                <label class="form-label">Password</label>
+                <div class="input-group input--group input--group-password">
+                  <input
+                    class="form-control form--control"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <span class="password-show-hide" style="cursor: pointer">
+                    <i
+                      class="far fa-eye open-eye-icon"
+                      style="display: none"
+                    ></i>
+                    <i class="far fa-eye-slash close-eye-icon"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-field password__field">
+                <label class="form-label">Confirm password</label>
+                <div class="input-group input--group input--group-password">
+                  <input
+                    class="form-control form--control"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <span class="password-show-hide" style="cursor: pointer">
+                    <i
+                      class="far fa-eye open-eye-icon"
+                      style="display: none"
+                    ></i>
+                    <i class="far fa-eye-slash close-eye-icon"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form--check gradient mt-4">
+              <input
+                type="checkbox"
+                id="agree"
+                name="agree"
+                class="form-check-input"
+                required=""
+              />
+              <label for="agree" class="form-check-label">
+                I agree with
+                <a href="#" class="fs-14 ms-1" target="_blank"
+                  >Privacy Policy</a
+                >
+                ,
+                <a href="#" class="fs-14 ms-1" target="_blank"
+                  >Terms of Service</a
+                >
+              </label>
+            </div>
+          </div>
+          <button class="w-100 btn btn--base mt-4" type="submit">
+            Login now
+          </button>
+        </form>
+
+        <p class="account-info">
+          Don't have an account? <a href="ragister.html">Create now</a>
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="account-thumb bg--img"
+      data-background-image="assets/images/signup.png"
+    >
+      <div class="account-right__content">
+        <div class="account-right__content__header">
+          <a href="index.html" class="account-logo-img text-center">
+            <img src="assets/images/logo/logo.png" alt="img" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!-- Jquery js -->

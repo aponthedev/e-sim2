@@ -1,11 +1,15 @@
 /* ====================== Breadcrumb Css Start ==================== */
 .breadcrumb {
-  background-color: hsl(var(--warning));
   margin-bottom: 0;
   padding-top: 150px;
   padding-bottom: 100px;
   position: relative;
   z-index: 1;
+
+  @include msm-screen {
+    padding-top: 117px;
+    padding-bottom: 52px;
+  }
 
   &::before {
     content: '';
@@ -39,6 +43,10 @@
   &__title {
     margin-bottom: 10px;
     color: hsl(var(--white));
+
+    @include msm-screen {
+      font-size: 24px;
+    }
   }
 
   &__list {

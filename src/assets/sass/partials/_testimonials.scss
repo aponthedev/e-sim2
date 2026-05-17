@@ -68,7 +68,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #d1d1d1; // Outer grey border
+  border: 1px solid hsl(var(--border-color));
   padding: 15px; // THIS CREATES THE GAP between border and card
   transition: all 0.3s ease;
 
@@ -77,8 +77,8 @@
   }
 
   &__inner {
-    background: #fff;
-    border-radius: 30px; // Inner card radius
+    background: hsl(var(--white));
+    border-radius: 30px;
     padding: 45px 30px 40px;
     height: 100%;
     width: 100%;
@@ -98,7 +98,7 @@
     border-radius: 50%;
     border: 4px solid hsl(var(--base));
     padding: 4px;
-    background: #f8f9fa; // Matches section background
+    background: #f8f9fa;
     overflow: hidden;
     z-index: 10;
 
@@ -107,7 +107,7 @@
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      background: #fff;
+      background: hsl(var(--white));
     }
   }
 
@@ -153,24 +153,24 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid hsl(var(--border-color));
   }
 
   &__name {
     font-size: 18px;
     font-weight: 700;
-    color: #111;
+    color: hsl(var(--heading-color));
     margin-bottom: 2px;
   }
 
   &__designation {
     font-size: 13px;
-    color: #888;
+    color: hsl(var(--border-color));
     margin-bottom: 0;
   }
 
   &__rating {
-    color: #ffb800;
+    color: hsl(var(--warning));
     font-size: 14px;
     display: flex;
     gap: 3px;
@@ -197,21 +197,21 @@
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background: #fff;
-  border: 1px solid #eee;
+  background: hsl(var(--white));
+  border: 1px solid hsl(var(--border-color));
   display: flex;
   justify-content: center;
   align-items: center;
   color: hsl(var(--base));
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   z-index: 10;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px hsl(var(--black) / 0.1);
 
   &:hover {
     background: hsl(var(--base));
-    color: #fff;
+    color: hsl(var(--base));
   }
 }
 

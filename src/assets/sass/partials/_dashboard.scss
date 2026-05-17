@@ -144,7 +144,7 @@
 
 .dashboard-sidebar-menu__item.active > a {
   color: hsl(var(--white));
-  background-color: hsl(var(--base-two));
+  background-color: hsl(var(--base));
 }
 
 .dashboard-sidebar-menu__link {
@@ -199,8 +199,8 @@
 
 .dashboard-sidebar-menu__link:hover,
 .dashboard-sidebar-menu__link:focus {
-  color: hsl(var(--base));
-  background-color: hsl(var(--base-two) / 0.1);
+  color: hsl(var(--white));
+  background-color: hsl(var(--base));
 }
 
 .dashboard-sidebar-submenu {
@@ -613,6 +613,14 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
+}
+
+.dashboard-sidebar .btn--close {
+  display: none !important;
+
+  @include lg-screen {
+    display: block !important;
+  }
 }
 
 /* ========================= Data Table End =========================== */

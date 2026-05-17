@@ -1,9 +1,9 @@
 /* ================================= Button Css Start =========================== */
-.btn-check:checked+.btn,
+.btn-check:checked + .btn,
 .btn.active,
 .btn.show,
 .btn:first-child:active,
-:not(.btn-check)+.btn:active {
+:not(.btn-check) + .btn:active {
   color: none;
   background-color: none;
   border-color: none;
@@ -74,10 +74,6 @@
     font-size: 15px;
     padding: 0;
   }
-
-  // ============= Gradient Button Start =======================
-  // @include gradient-btn(--base, --base, --base-two, 90deg);
-  // ============= Gradient Button End =======================
 
   // ============= Different Color Button Start ==================
   @include btn-style(--base);
