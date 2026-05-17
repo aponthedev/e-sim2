@@ -118,29 +118,29 @@
   // ========================= Magnific Popup Js End ===================
 
   // ========================= Testimonial Swiper Js Start =====================
-  const swiperTestimonials = new Swiper('.slider__class', {
+  const swiperTestimonials = new Swiper('.testimonial-slider', {
     loop: true,
     speed: 1000,
-    spaceBeteen: 32,
+    spaceBetween: 30,
     grabCursor: true,
-    effect: 'creative',
-    creativeEffect: {
-      prev: {
-        scale: ['0.9'],
-        opacity: 0,
-      },
-      next: {
-        scale: ['0.9'],
-        opacity: 0,
-      },
-    },
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    navigation: {
+      nextEl: '.slider-next-v2',
+      prevEl: '.slider-prev-v2',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
     },
   });
   // ========================= Testimonial Swiper Js End =====================

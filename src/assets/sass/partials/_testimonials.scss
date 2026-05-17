@@ -1,0 +1,247 @@
+/* ======================  Testimonial Section Start  ======================*/
+
+.testimonial-eyebrow {
+  color: hsl(var(--base));
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 2px solid hsl(var(--base));
+  padding-bottom: 2px;
+}
+
+.btn-see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: hsl(var(--base));
+  color: #fff !important;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid hsl(var(--base));
+    border-right: 2px solid hsl(var(--base));
+    opacity: 0.5;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: -8px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid hsl(var(--base));
+    border-left: 2px solid hsl(var(--base));
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background-color: hsl(var(--base));
+    transform: translateY(-2px);
+  }
+}
+
+.testimonial-slider-container {
+  position: relative;
+  padding: 0 60px;
+}
+
+.testimonial-item-v2 {
+  background: transparent;
+  border-radius: 40px; // Larger radius for the outer border
+  margin-top: 45px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d1d1d1; // Outer grey border
+  padding: 15px; // THIS CREATES THE GAP between border and card
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__inner {
+    background: #fff;
+    border-radius: 30px; // Inner card radius
+    padding: 45px 30px 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid hsl(var(--base));
+    padding: 4px;
+    background: #f8f9fa; // Matches section background
+    overflow: hidden;
+    z-index: 10;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+
+  &__quote-top {
+    position: absolute;
+    top: -34px;
+    left: 30px;
+    font-size: 40px;
+    color: hsl(var(--base));
+    background: hsl(var(--white));
+    padding: 0 10px;
+    line-height: 1;
+    z-index: 10;
+  }
+
+  &__quote-bottom {
+    position: absolute;
+    bottom: -33px;
+    right: 30px;
+    font-size: 40px;
+    color: hsl(var(--base));
+    background: hsl(var(--white));
+    padding: 0 10px;
+    line-height: 1;
+    z-index: 10;
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    font-weight: 400;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 2px;
+  }
+
+  &__designation {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 0;
+  }
+
+  &__rating {
+    color: #ffb800;
+    font-size: 14px;
+    display: flex;
+    gap: 3px;
+  }
+}
+
+.testimonial-slider {
+  .swiper-wrapper {
+    display: flex;
+  }
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    & > div {
+      width: 100%;
+    }
+  }
+}
+
+.slider-prev-v2,
+.slider-next-v2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(var(--base));
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    background: hsl(var(--base));
+    color: #fff;
+  }
+}
+
+.slider-prev-v2 {
+  left: 0;
+}
+.slider-next-v2 {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .testimonial-slider-container {
+    padding: 0 0px;
+  }
+  .slider-prev-v2,
+  .slider-next-v2 {
+    display: none;
+  }
+}
+
+.testimonial .testimonial-slider {
+  padding-bottom: 60px;
+}
+
+.testimonial .section-heading h2 span svg {
+  max-width: 306px;
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+
+/* ======================  Testimonial Section End  ======================*/

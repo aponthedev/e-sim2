@@ -1,0 +1,128 @@
+/* ======================  Services Section Start  ======================*/
+
+.services-section {
+  background-color: hsl(var(--white));
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card {
+  background-color: hsl(var(--white));
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid hsl(var(--border-color) / 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--base) / 0.05) 0%,
+      transparent 100%
+    );
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: hsl(var(--base) / 0.3);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .service-card__icon {
+      background-color: hsl(var(--base));
+      color: hsl(var(--white));
+      transform: rotateY(360deg);
+    }
+
+    .service-card__link {
+      color: hsl(var(--base));
+
+      i {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    background-color: hsl(var(--base) / 0.1);
+    color: hsl(var(--base));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    transition: all 0.6s ease;
+    margin-top: -75px;
+    backdrop-filter: blur(10px);
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: hsl(var(--heading-color));
+  }
+
+  &__desc {
+    font-size: 16px;
+    color: hsl(var(--body-color));
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  &__link {
+    font-size: 15px;
+    font-weight: 600;
+    color: hsl(var(--heading-color));
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    background-color: hsl(var(--base));
+    padding: 10px 16px;
+    color: hsl(var(--white));
+    border-radius: 14px;
+
+    i {
+      font-size: 14px;
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+.pricing__btn {
+  margin-bottom: -98px !important;
+}
+
+.services-section .section-heading {
+  margin-bottom: 78px;
+}
+
+/* ======================  Services Section End  ======================*/

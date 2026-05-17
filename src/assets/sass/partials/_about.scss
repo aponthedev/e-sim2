@@ -140,12 +140,13 @@
   &__status {
     position: absolute;
     z-index: 2;
-    min-width: 156px;
+    min-width: 56%;
     padding: 16px 18px;
     background-color: hsl(var(--white));
     border: 1px solid hsl(var(--border-color));
     border-radius: 16px;
-    animation: aboutFloat 4s ease-in-out infinite;
+    text-align: center;
+    background-color: hsl(var(--base));
 
     @include sm-screen {
       min-width: 132px;
@@ -154,7 +155,7 @@
 
     span {
       display: block;
-      color: hsl(var(--base));
+      color: hsl(var(--white));
       font-size: 28px;
       font-weight: 800;
       line-height: 1;
@@ -166,15 +167,15 @@
 
     p {
       margin: 6px 0 0;
-      color: hsl(var(--heading-color));
+      color: hsl(var(--white));
       font-size: 14px;
       font-weight: 700;
     }
 
     &--top {
-      top: 62px;
-      right: 0;
-      animation-delay: 0.35s;
+      bottom: 51px;
+      left: 0;
+      // animation-delay: 0.35s;
     }
 
     &--bottom {
@@ -255,28 +256,6 @@
   }
 }
 
-@keyframes aboutFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes aboutFloatAlt {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-}
-
 @keyframes aboutRotate {
   0% {
     transform: rotate(0deg);
@@ -297,8 +276,8 @@
 
 .about .media-wrapper {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 68%;
+  top: 38%;
   z-index: 3;
   transform: translate(-50%, -50%);
 }

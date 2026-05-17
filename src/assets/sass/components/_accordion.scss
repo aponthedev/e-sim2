@@ -17,7 +17,7 @@
 
   .accordion-body {
     padding: 20px;
-    background-color: hsl(var(--section-bg));
+    background-color: hsl(var(--white));
 
     .text {
       max-width: 60%;
@@ -37,7 +37,7 @@
   }
 
   .accordion-button {
-    background-color: hsl(var(--section-bg));
+    background-color: hsl(var(--white));
     color: var(--heading-color);
     font-size: 18px;
     padding: 15px;
